@@ -1,0 +1,17 @@
+<%- include("header.ejs")%>
+
+<section>
+    <h1>Enter an approximate of the word your looking for</h1>
+    <form action="/get-word" method="post" id="word-form">
+        <input type="text" id="word" name="word" placeholder="Your word here">
+        <button type="submit">What's the word?</button>
+    </form>
+</section>
+
+<section>
+    <%if(locals.synonyms){%>
+        <%= synonyms%>
+    <%}%>
+</section>
+
+<%- include("footer.ejs")%>
