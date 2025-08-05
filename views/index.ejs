@@ -10,7 +10,10 @@
 
 <section>
     <%if(locals.synonyms){%>
-        <%= synonyms%>
+        <%synonyms.forEach((word, index)=>{%>
+            <span><%=synonyms[index][0]%></span>
+            <span><%=synonyms[index][1]%></span>
+        <%});%>
     <%}%>
 </section>
 

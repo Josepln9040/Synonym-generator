@@ -44,7 +44,6 @@ app.post("/get-word", async (req, res) => {
       })
     );
 
-    console.log(synonyms);
     res.render("index.ejs", { synonyms });
   } catch (error) {
     console.error("Failed to make request:", error.message);
