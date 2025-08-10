@@ -1,18 +1,26 @@
 <%- include("header.ejs")%>
 
-<section>
-    <h1>Enter an approximate of the word your looking for</h1>
+<section id="form-section">
+    <h1>Enter an approximate of the word you're looking for</h1>
     <form action="/get-word" method="post" id="word-form">
         <input type="text" id="word" name="word" placeholder="Your word here">
-        <button type="submit">What's the word?</button>
+        <button id="submit-button" type="submit">What's the word?</button>
     </form>
 </section>
 
-<section>
+<section id="synonyms-section">
     <%if(locals.synonyms){%>
         <%synonyms.forEach((word, index)=>{%>
-            <span><%=synonyms[index][0]%></span>
-            <span><%=synonyms[index][1]%></span>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <span class="text"><%=synonyms[index][0]%></span>
+                    </div>
+                    <div class="flip-card-back">
+                        <span class="text"><%=synonyms[index][1]%></span>
+                    </div>
+                </div>
+            </div>
         <%});%>
     <%}%>
 </section>
