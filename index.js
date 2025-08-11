@@ -4,9 +4,11 @@ import axios from "axios";
 
 var app = express();
 var port = 3000;
+var apiKey = "Your api key here";
+
 const config ={
     headers: {
-        "x-rapidapi-key": "1cb6323ed1msh4596d65c5392d8ep16a48djsn61db5d3dc8f8",
+        "x-rapidapi-key": apiKey,
         "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
     },
 }
