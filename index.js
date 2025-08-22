@@ -4,7 +4,7 @@ import axios from "axios";
 
 var app = express();
 var port = 3000;
-var apiKey = "Your api key here";
+const apiKey = process.env.API_KEY
 
 const config ={
     headers: {
